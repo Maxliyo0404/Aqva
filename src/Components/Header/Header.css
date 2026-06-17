@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: space-between;
     background: var(--color-red-1763, #441118A1);
-     padding:  16.5px 0;
+     padding:  14px 0;
      border-radius: 30px;
 }
 .header-nav, 
@@ -35,8 +35,8 @@
     display: flex;
     list-style: none;
     gap: 35px;
-    margin: 0;
-    padding: 0;
+ 
+
 }
 
 .header-link {

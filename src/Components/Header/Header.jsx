@@ -38,7 +38,6 @@ function Header() {
                         </div>
                     </nav>
 
-                    {/* 2. MARKAZ: Logotip (Har doim o'rtada mustaqil turadi) */}
                     <div className="header-logo-box">
                         <a className="logo" href="#">
                             <img src={logo} alt="AQVO Logo" />
