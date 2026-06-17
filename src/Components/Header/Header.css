@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(68, 17, 24, 0.63); /* Figmadagi #441118A1 rangi */
+
     backdrop-filter: blur(10px);
 }
 
@@ -14,6 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--color-red-1763, #441118A1);
+     padding:  16.5px 0;
+     border-radius: 30px;
 }
 .header-nav, 
 .header-logo-box, 
