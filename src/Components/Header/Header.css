@@ -95,10 +95,10 @@
 }
 
 .header-btn {
-    background: #A78861;
-    color: #441118;
+    background: #bf9b6f;
+    color: #FFFFFF;
     border: none;
-    padding: 10px 36px;
+    padding: 10px 40px;
     border-radius: 25px;
     font-weight: 600;
     font-size: 15px;
@@ -111,16 +111,12 @@
     background: #ffffff;
     transform: translateY(-1px);
 }
-
-/* Ko'rinish nazorati */
 .mobile-only {
     display: none;
 }
 .burger-menu {
     display: none;
 }
-
-/* 📱 RESPONSIVE (768px dan kichik ekranlar uchun) */
 @media (max-width: 992px) {
     .container {
         padding: 0 20px;
@@ -184,8 +180,6 @@
         align-items: center;
         gap: 20px;
     }
-
-    /* Burger menyu animatsiyasi */
     .burger-menu.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
