@@ -30,6 +30,7 @@ function Header() {
                     </select>
                   </div>
            </nav>
+               <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}></nav>
       <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
