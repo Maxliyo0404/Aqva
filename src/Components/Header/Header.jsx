@@ -16,12 +16,12 @@ function Header() {
     <div className="header">
         <div className="container">
             <div className="header-container">
-                <a className="logo" href="#"><img src={logo} alt="rasm" /></a>
                  <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
                 <ul className="header-list">
                     <li><a className="header-link" href="#">{t("header.home")}</a></li>
                     <li><a className="header-link" href="#">{t("header.about")}</a></li>
                 </ul>
+                 <a className="logo" href="#"><img src={logo} alt="rasm" /></a>
                 <div className="header-actions">
                     <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
                       <option value="uz">Uz</option>
