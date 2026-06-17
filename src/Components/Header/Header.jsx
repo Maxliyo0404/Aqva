@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import "./Header.css";
 import React, { useState } from 'react'
-import
-
+import logo from "./image/logo.png"
+import i18next from "i18next";
 function Header() {
-    const {t} = useTranslation();
+    const {t, i18n} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState (false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -16,11 +16,11 @@ function Header() {
     <div className="header">
         <div className="container">
             <div className="header-container">
-                <a className="logo" href="#"><img src={logoPages} alt="rasm" /></a>
+                <a className="logo" href="#"><img src={logo} alt="rasm" /></a>
                  <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
                 <ul className="header-list">
-                    <li><Link className="header-link" to="home">{t("header.home")}</Link></li>
-                    <li><Link className="header-link" to="about">{t("header.about")}</Link></li>
+                    <li><a className="header-link" href="#">{t("header.home")}</a></li>
+                    <li><a className="header-link" href="#">{t("header.about")}</a></li>
                 </ul>
                 <div className="header-actions">
                     <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
