@@ -51,7 +51,7 @@
 .header-lengu{
     display: flex;
     align-items: center;
-    gap: ;
+    gap: 3px;
 }
 .select {
     padding: 8px;
