@@ -29,7 +29,7 @@ function Header() {
                       <option value="ru"> Rus</option>
                     </select>
                   </div>
-                  <button type="submit" className="header-btn"></button>
+                  <button type="submit" className="header-btn">{t("header.header-btn")}</button>
            </nav>
       <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
         <span></span>
