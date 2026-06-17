@@ -29,8 +29,8 @@ function Header() {
                       <option value="ru"> Rus</option>
                     </select>
                   </div>
+                  <button></button>
            </nav>
-               <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}></nav>
       <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
