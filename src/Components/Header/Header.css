@@ -5,17 +5,15 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-
     backdrop-filter: blur(10px);
 }
 
 .header-container {
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--color-red-1763, #441118A1);
-     padding:  14px 0;
      border-radius: 30px;
      position: relative;
 }
@@ -24,8 +22,6 @@
 .desktop-only {
     flex: 1; 
 }
-
-/* 1. Chap tomon (Menyu) */
 .header-nav {
     display: flex;
     align-items: center;
@@ -83,14 +79,14 @@
 }
 
 .select {
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+   
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.08);
     outline: none;
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 25px;
+    font-weight: 600;
+    background: none;
+    border: none;
 }
 
 .select option {
@@ -102,7 +98,7 @@
     background: #E5C396;
     color: #441118;
     border: none;
-    padding: 10px 26px;
+    padding: 10px 36px;
     border-radius: 25px;
     font-weight: 600;
     font-size: 15px;
