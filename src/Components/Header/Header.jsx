@@ -22,6 +22,7 @@ function Header() {
                     <li><a className="header-link" href="#">{t("header.about")}</a></li>
                 </ul>
                  <a className="logo" href="#"><img src={logo} alt="rasm" /></a>
+                 <div className="header-lengu">
                 <div className="header-actions">
                     <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
                       <option value="uz">Uz</option>
@@ -30,7 +31,8 @@ function Header() {
                     </select>
                   </div>
                   <button type="submit" className="header-btn">{t("header.header-btn")}</button>
-           </nav>
+                    </div>
+             </nav>
       <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
