@@ -48,7 +48,11 @@
     align-items: center;
     gap: 15px;
 }
-
+.header-lengu{
+    display: flex;
+    align-items: center;
+    gap: ;
+}
 .select {
     padding: 8px;
     border-radius: 6px;
