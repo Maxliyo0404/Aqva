@@ -4,7 +4,6 @@
     top: 0;
     left: 0;
     width: 100%;
-     background: var(--color-red-1763, #441118A1);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -13,6 +12,8 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    background: var(--color-red-1763, #441118A1);
+
 }
 .header-nav {
     display: flex;
