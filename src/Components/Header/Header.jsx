@@ -19,15 +19,13 @@ function Header() {
         <div className="header">
             <div className="container">
                 <div className="header-container">
-                    
-                    {/* 1. CHAP TOMON: Menyu (Kompyuter va mobil uchun birlashtirilgan) */}
+
                     <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
                         <ul className="header-list">
                             <li><a className="header-link" href="#home">{t("header.home")}</a></li>
                             <li><a className="header-link" href="#about">{t("header.about")}</a></li>
                         </ul>
-                        
-                        {/* Mobil versiyada menyu ichida chiqadigan qism */}
+                    
                         <div className="header-lengu mobile-only">
                             <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
                                 <option value="uz">Uz</option>
@@ -43,8 +41,6 @@ function Header() {
                             <img src={logo} alt="AQVO Logo" />
                         </a>
                     </div>
-
-                    {/* 3. O'NG TOMON: Til va Tugma (Faqat kompyuter uchun) */}
                     <div className="header-lengu desktop-only">
                         <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
                             <option value="uz">Uz</option>
