@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import "./Header.css";
-import React from 'react'
+import React, { useState } from 'react'
 
 function Header() {
     const {t} = useTranslation();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState (false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -19,7 +19,7 @@ function Header() {
                  <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
                 <ul className="header-list">
                     <li><Link className="header-link" to="home">{t("header.home")}</Link></li>
-                    <li><Link className="header-link" to="services">{t("header.services")}</Link></li>
+                    <li><Link className="header-link" to="about">{t("header.about")}</Link></li>
                 </ul>
                 <div className="header-actions">
                     <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
