@@ -44,14 +44,12 @@
     font-weight: 500;
     font-size: 16px;
     transition: 0.3s ease;
-    white-space: nowrap; /* Matn pastga tushib ketmasligi uchun */
+    white-space: nowrap; 
 }
 
 .header-link:hover {
     color: #E5C396;
 }
-
-/* 2. Markaz (Logotip qutisi) */
 .header-logo-box {
     display: flex;
     justify-content: center;
@@ -59,12 +57,10 @@
 }
 
 .logo img {
-    height: 45px; /* Logotip balandligini moslang */
+    height: 45px; 
     display: block;
     object-fit: contain;
 }
-
-/* 3. O'ng tomon */
 .desktop-only {
     display: flex;
     justify-content: flex-end;
