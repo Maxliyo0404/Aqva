@@ -1,11 +1,3 @@
-/* Asosiy konteyner cheklovlari */
-.container {
-    width: 100%;
-    max-width: 1440px; /* Figmadagi umumiy ekran o'lchami */
-    margin: 0 auto;
-    padding: 0 40px; /* Chekkalardan masofa */
-    box-sizing: border-box;
-}
 
 .header {
     position: sticky;
@@ -23,8 +15,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
-/* 3 ta blokni teng kenglikda taqsimlash (To'qnashuv bo'lmasligi uchun) */
 .header-nav, 
 .header-logo-box, 
 .desktop-only {
