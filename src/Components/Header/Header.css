@@ -1,11 +1,15 @@
+body.menu-open {
+    overflow: hidden !important;
+}
+
 .header {
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    backdrop-filter: blur(10px);
     padding: 15px 0;
+    background-color: transparent; /* Yoki o'zingizga kerakli rang */
 }
 
 .header-container {
@@ -125,7 +129,24 @@
     .header-nav, .desktop-only {
         flex: unset;
     }
-    
+    .header-nav {
+        position: fixed;
+        top: 0; 
+        right: -100%; 
+        width: 100%; 
+        height: 100vh;
+        background: #F2F2F2; 
+        transition: right 0.4s ease-in-out;
+        z-index: 1010;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    .header-nav.active {
+        right: 0;
+    }
     .desktop-only {
         display: none;
     }

@@ -7,8 +7,16 @@ function Header() {
     const { t, i18n } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+   const toggleMenu = () => {
+        const newState = !isMenuOpen;
+        setIsMenuOpen(newState);
+        
+        // Body ga klass qo'shish yoki olib tashlash
+        if (newState) {
+            document.body.classList.add("menu-open");
+        } else {
+            document.body.classList.remove("menu-open");
+        }
     };
     
     const handleLanguageChange = (lang) => {
@@ -29,13 +37,14 @@ function Header() {
                         </div>
 
                         <ul className="header-list">
-                            <li>
-                                <a className="header-link" href="#home" onClick={() => setIsMenuOpen(false)}>
+                          <li>
+            
+                                <a className="header-link" href="#home" onClick={toggleMenu}>
                                     {t("header.home")}
                                 </a>
                             </li>
                             <li>
-                                <a className="header-link" href="#about" onClick={() => setIsMenuOpen(false)}>
+                                <a className="header-link" href="#about" onClick={toggleMenu}>
                                     {t("header.about")}
                                 </a>
                             </li>
