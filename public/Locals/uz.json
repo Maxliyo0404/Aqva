@@ -3,5 +3,23 @@
         "home": "Bosh sahifa",
         "about" : "Biz haqimizda",
         "header-btn" : "Bog'lanish"    
+    },
+    "hero": {
+    "marquee_text": "ISHONCH! TABIIY MAHSULOTLAR SIFAT VA ",
+    "description": "AQVO – O‘zbekistonda birinchi bo‘lib sifat va halollikni o‘zida mujassam etgan, jiz mahsulotlarini yangicha ta’m va zamonaviy dizaynda taqdim etuvchi yetakchi brend.",
+    "order_btn": "BUYURTMA",
+    "form": {
+      "title": "Buyurtma",
+      "name": "Ismingiz",
+      "surname": "Familiyangiz",
+      "phone": "Telefon raqamingiz",
+      "telegram": "Telegram username",
+      "region": "Hudud",
+      "service": "Xizmat turini tanlang",
+      "option_product": "Mahsulot",
+      "option_franchise": "Franshiza",
+      "message": "Xabar",
+      "submit": "Yuborish"
     }
+  }
 }

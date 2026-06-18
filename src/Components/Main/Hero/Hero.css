@@ -1,0 +1,215 @@
+:root {
+  --bg-dark-red: #8B1414;
+  --accent-gold: #E08722;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark-red);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 80px; /* Headeringiz ochiq qolishi va matnga yopishmasligi uchun */
+}
+
+/* --- 1. MARQUEE SLIDER (ERKIN OKIMDA) --- */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  margin-top: 20px;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-marquee 28s linear infinite;
+}
+
+.marquee-content span {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 11.5vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.95);
+  text-transform: uppercase;
+  padding-right: 3vw;
+  line-height: 1;
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- 2. ASOSIY BLOK VA ANIQ FIGMA MASOFALARI --- */
+.hero .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-content-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  /* FIGMA: Marquee bilan orasi aniq 200px */
+  margin-top: 200px; 
+  
+  /* FIGMA: Pastdagi rasm (banner) bilan orasi aniq 60px */
+  margin-bottom: 60px; 
+}
+
+/* LEFT MATN */
+.text-content {
+  max-width: 340px;
+}
+
+.text-content p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* RIGHT SHOH TUGMASI (CONTAINER ICHIDA JIPIDAB TURADI) */
+.circle-toggle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-background {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.circle-toggle:hover .circle-background {
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.03);
+}
+
+.horn-icon-img {
+  width: 45px;
+  height: auto;
+  display: block;
+}
+
+/* --- 3. ENG PASTIDAGI BANNER --- */
+.banner-bottom-full {
+  width: 100%;
+  margin-top: auto; /* Avtomatik sahifa tubiga taqaladi */
+  line-height: 0;
+}
+
+.products-banner-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- 4. MODAL OVERLAY & FORM STILLARI --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-panel-content {
+  width: 480px;
+  background: rgba(131, 18, 18, 0.98);
+  border-radius: 12px;
+  padding: 40px 30px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.panel-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* SELECT PITICHKASI */
+.select-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #ffffff;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.order-form select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 28px !important;
+}
+
+/* Umumiy form elementlari */
+.order-form { display: flex; flex-direction: column; gap: 22px; }
+.form-row { display: flex; gap: 15px; }
+.order-form input, .order-form select, .order-form textarea {
+  flex: 1; background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 5px; color: #fff; font-family: 'Segoe UI', sans-serif; font-size: 14px; outline: none;
+}
+.order-form input::placeholder, .order-form textarea::placeholder { color: rgba(255, 255, 255, 0.5); }
+.order-form input:focus, .order-form select:focus, .order-form textarea:focus { border-bottom-color: var(--accent-gold); }
+.order-form select option { background: #721010; color: #fff; }
+
+.form-submit-btn {
+  background: #E08722; color: white; border: none; padding: 14px; font-size: 15px;
+  font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px;
+}
+
+/* --- RESPONSIVE MEDIA --- */
+@media (max-width: 992px) {
+  .hero-content-row {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+}
