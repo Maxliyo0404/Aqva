@@ -11,8 +11,8 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
     
-    const handleChangeLanguage = (event) => {
-        i18n.changeLanguage(event.target.value);
+    const handleLanguageChange = (lang) => {
+        i18n.changeLanguage(lang);
     };
 
     return (
@@ -20,29 +20,66 @@ function Header() {
             <div className="container">
                 <div className="header-container">
 
+                    {/* Mobil va Desktop Navigatsiya paneli */}
                     <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
+                        
+                        {/* Mobil menyu ichidagi maxsus tepa qism (Logo va Krestik) */}
+                        <div className="mobile-menu-header">
+                            <img src={logo} alt="AQVO Logo" className="mobile-menu-logo" />
+                            <div className="close-menu-btn" onClick={toggleMenu}>
+                                &times;
+                            </div>
+                        </div>
+
+                        {/* Navigatsiya havolalari */}
                         <ul className="header-list">
-                            <li><a className="header-link" href="#home">{t("header.home")}</a></li>
-                            <li><a className="header-link" href="#about">{t("header.about")}</a></li>
+                            <li>
+                                <a className="header-link" href="#home" onClick={() => setIsMenuOpen(false)}>
+                                    {t("header.home")}
+                                </a>
+                            </li>
+                            <li>
+                                <a className="header-link" href="#about" onClick={() => setIsMenuOpen(false)}>
+                                    {t("header.about")}
+                                </a>
+                            </li>
                         </ul>
                     
+                        {/* Figma chizmasidagi mobil til va tugma bloki */}
                         <div className="header-lengu mobile-only">
-                            <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
-                                <option value="uz">Uz</option>
-                                <option value="en">Eng</option>
-                                <option value="ru">Rus</option>
-                            </select>
-                            <button type="button" className="header-btn">{t("header.header-btn")}</button>
+                            <div className="mobile-lang-selector">
+                                <button 
+                                    className={`lang-btn ${i18n.language === 'ru' ? 'active' : ''}`} 
+                                    onClick={() => handleLanguageChange('ru')}
+                                >
+                                    RU
+                                </button>
+                                <button 
+                                    className={`lang-btn ${i18n.language === 'uz' ? 'active' : ''}`} 
+                                    onClick={() => handleLanguageChange('uz')}
+                                >
+                                    UZ
+                                </button>
+                                <button 
+                                    className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`} 
+                                    onClick={() => handleLanguageChange('en')}
+                                >
+                                    EN
+                                </button>
+                            </div>
                         </div>
                     </nav>
 
+                    {/* Markazdagi asosiy logo */}
                     <div className="header-logo-box">
                         <a className="logo" href="#">
                             <img src={logo} alt="AQVO Logo" />
                         </a>
                     </div>
+
+                    {/* Faqat Desktop uchun til va bog'lanish tugmasi */}
                     <div className="header-lengu desktop-only">
-                        <select className="select" onChange={handleChangeLanguage} value={i18n.language}>
+                        <select className="select" onChange={(e) => handleLanguageChange(e.target.value)} value={i18n.language}>
                             <option value="uz">UZB</option>
                             <option value="en">ENG</option>
                             <option value="ru">RUS</option>
@@ -50,7 +87,7 @@ function Header() {
                         <button type="button" className="header-btn">{t("header.header-btn")}</button>
                     </div>
 
-                    {/* Mobil burger tugmasi */}
+                    {/* Burger chiziqchalari (Faqat mobil ekranda ko'rinadi) */}
                     <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
                         <span></span>
                         <span></span>
@@ -59,6 +96,9 @@ function Header() {
 
                 </div>
             </div>
+            
+            {/* Orqa fonni xiralashtiruvchi qatlam (Ochilganda fon bosilsa yopiladi) */}
+            {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
         </div>
     );
 }

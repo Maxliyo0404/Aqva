@@ -41,26 +41,27 @@ function Hero() {
       {/* 1. Katta aylanuvchi matn (Marquee) */}
       <div className="marquee-container">
         <div className="marquee-content">
-          <span>{t('hero.marquee_text')}</span>
-          <span>{t('hero.marquee_text')}</span>
+          <span>{t('hero.marquee_text') || "TABIIY MAHSULOTLAR"}</span>
+          <span>{t('hero.marquee_text') || "TABIIY MAHSULOTLAR"}</span>
         </div>
       </div>
 
       {/* 2. Asosiy boshqaruvchi container */}
       <div className="container">
-        
-        {/* Left va Right elementlar joylashgan qator */}
         <div className="hero-content-row">
           
           {/* Chap tarafdagi matn */}
           <div className="text-content">
-            <p>{t('hero.description')}</p>
+            <p>{t('hero.description') || "AQVO – O‘zbekistonda birinchi bo‘lib sifat va halollikni o‘zida mujassam etgan..."}</p>
           </div>
 
-          {/* O'ng tarafdagi shoh tugmasi (Konteyner ichiga mahkamlangan) */}
+          {/* O'ng tarafdagi dinamik tugma (Hover bo'lganda yozuv chiqadi) */}
           <div className="circle-toggle" onClick={() => setIsPanelOpen(true)}>
             <div className="circle-background">
+              {/* Standart holatda turadigan shoh logotipi */}
               <img src={hero1} alt="AQVO Horn" className="horn-icon-img" />
+              {/* Mishka borganda chiqadigan matn */}
+              <span className="hover-text-order">BUYURTMA</span>
             </div>
           </div>
 
@@ -72,7 +73,7 @@ function Hero() {
         <img src={hero2} alt="AQVO Products" className="products-banner-full" />
       </div>
 
-      {/* 4. Modal forma */}
+      {/* 4. Modal panel */}
       {isPanelOpen && (
         <div className="modal-overlay" onClick={() => setIsPanelOpen(false)}>
           <div className="modal-panel-content" onClick={(e) => e.stopPropagation()}>
@@ -83,14 +84,14 @@ function Hero() {
                 <input type="text" name="surname" placeholder={t('hero.form.surname') || "Familiyangiz"} value={formData.surname} onChange={handleChange} required />
               </div>
               <div className="form-row">
-                <input type="tel" name="phone" placeholder={t('hero.form.phone') || "Telefon raqam"} value={formData.phone} onChange={handleChange} required />
-                <input type="text" name="telegram" placeholder={t('hero.form.telegram') || "Telegram"} value={formData.telegram} onChange={handleChange} />
+                <input type="tel" name="phone" placeholder={t('hero.form.phone') || "Telefon raqamingiz"} value={formData.phone} onChange={handleChange} required />
+                <input type="text" name="telegram" placeholder={t('hero.form.telegram') || "Telegram username"} value={formData.telegram} onChange={handleChange} />
               </div>
               <div className="form-row">
                 <input type="text" name="region" placeholder={t('hero.form.region') || "Hudud"} value={formData.region} onChange={handleChange} required />
                 <div className="select-wrapper">
                   <select name="service" value={formData.service} onChange={handleChange} required>
-                    <option value="" disabled hidden>{t('hero.form.service') || "Xizmat turi"}</option>
+                    <option value="" disabled hidden>{t('hero.form.service') || "Xizmat turini tanlang"}</option>
                     <option value="Mahsulot">Mahsulot</option>
                     <option value="Franshiza">Franshiza</option>
                   </select>

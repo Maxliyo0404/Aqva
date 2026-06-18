@@ -1,26 +1,29 @@
 :root {
   --bg-dark-red: #8B1414;
   --accent-gold: #E08722;
+  --btn-gold-bg: #b09168;
 }
 
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  /* Ortiqcha cho'zilishni batamom yo'qotamiz */
+  height: auto;
+  min-height: auto; 
   background-color: var(--bg-dark-red);
-  display: flex;
-  flex-direction: column;
+  display: block; /* Flex-dan oddiy block-ga o'tkazildi, shunda pastga majburlab qisish bo'lmaydi */
   box-sizing: border-box;
-  padding-top: 80px; /* Headeringiz ochiq qolishi va matnga yopishmasligi uchun */
+  padding-top: 80px; 
+  overflow: hidden;
 }
 
-/* --- 1. MARQUEE SLIDER (ERKIN OKIMDA) --- */
+/* --- 1. MARQUEE SLIDER --- */
 .marquee-container {
   display: flex;
   overflow: hidden;
   width: 100%;
   user-select: none;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .marquee-content {
@@ -44,7 +47,7 @@
   100% { transform: translateX(-50%); }
 }
 
-/* --- 2. ASOSIY BLOK VA ANIQ FIGMA MASOFALARI --- */
+/* --- 2. ASOSIY ROW BLOK --- */
 .hero .container {
   max-width: 1200px;
   width: 100%;
@@ -59,16 +62,14 @@
   justify-content: space-between;
   align-items: flex-end;
   
-  /* FIGMA: Marquee bilan orasi aniq 200px */
-  margin-top: 200px; 
-  
-  /* FIGMA: Pastdagi rasm (banner) bilan orasi aniq 60px */
-  margin-bottom: 60px; 
+  /* Katta monitorlar uchun standart Figma masofalari */
+  margin-top: 100px;   
+  margin-bottom: 60px;  
+  transition: all 0.3s ease;
 }
 
-/* LEFT MATN */
 .text-content {
-  max-width: 340px;
+  max-width: 380px;
 }
 
 .text-content p {
@@ -79,45 +80,66 @@
   margin: 0;
 }
 
-/* RIGHT SHOH TUGMASI (CONTAINER ICHIDA JIPIDAB TURADI) */
+/* --- DINAMIK SHOH TUGMASI --- */
 .circle-toggle {
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .circle-background {
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.circle-toggle:hover .circle-background {
-  background: rgba(0, 0, 0, 0.6);
-  transform: scale(1.03);
+  overflow: hidden;
 }
 
 .horn-icon-img {
-  width: 45px;
+  width: 50px;
   height: auto;
-  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
 }
+
+.hover-text-order {
+  position: absolute;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.3s ease;
+}
+
+.circle-toggle:hover .circle-background {
+  background: var(--btn-gold-bg);
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(176, 145, 104, 0.4);
+}
+
+.circle-toggle:hover .horn-icon-img { opacity: 0; transform: scale(0.5); }
+.circle-toggle:hover .hover-text-order { opacity: 1; transform: scale(1); }
 
 /* --- 3. ENG PASTIDAGI BANNER --- */
 .banner-bottom-full {
   width: 100%;
-  margin-top: auto; /* Avtomatik sahifa tubiga taqaladi */
   line-height: 0;
+  margin-top: 0; /* Ortiqcha avtomatik pastga surish o'chirildi */
 }
 
 .products-banner-full {
@@ -126,90 +148,110 @@
   display: block;
 }
 
-/* --- 4. MODAL OVERLAY & FORM STILLARI --- */
+
+/* ==========================================================================
+   RESPONSIVE: EKAN 1030PX DAN KICHRAYGANDA (PLANSHET VA MOBIL)
+   ========================================================================== */
+
+@media (max-width: 1030px) {
+  .hero { 
+    padding-top: 70px; 
+  }
+  
+  .hero-content-row {
+    /* Siz aytgandek: tepasi ham qat'iy 30px, pastki rasm bilan orasi ham qat'iy 30px! */
+    margin-top: 30px !important; 
+    margin-bottom: 30px !important;
+  }
+  
+  .circle-toggle { 
+    width: 100px; 
+    height: 100px; 
+  }
+  
+  .horn-icon-img { 
+    width: 45px; 
+  }
+}
+
+/* --- KICHIK PLANSHETLAR (768px gacha) --- */
+@media (max-width: 768px) {
+  .hero-content-row {
+    margin-top: 30px !important; 
+    margin-bottom: 30px !important;
+    align-items: center;
+    gap: 20px;
+  }
+  .text-content { max-width: 65%; }
+  .text-content p { font-size: 13px; }
+  .circle-toggle { width: 90px; height: 90px; }
+  .horn-icon-img { width: 40px; }
+  .hover-text-order { font-size: 10px; }
+}
+
+/* --- MOBIL APPARATLAR (480px gacha — image_0ba90c.jpg skrinshotingiz holati) --- */
+@media (max-width: 480px) {
+  .hero { 
+    padding-top: 50px; 
+  }
+  
+  .hero-content-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* Ikkala tomonlama 30px masofa qat'iy mixlandi, endi ekran uzun bo'lsa ham cho'zilmaydi! */
+    margin-top: 30px !important; 
+    margin-bottom: 30px !important;
+    gap: 20px;
+  }
+  
+  .text-content { 
+    max-width: 100%; 
+    padding: 0 15px; 
+  }
+  
+  .circle-toggle { 
+    width: 85px; 
+    height: 85px; 
+  }
+  
+  .horn-icon-img { 
+    width: 35px; 
+  }
+  
+  .hover-text-order { 
+    font-size: 9px; 
+  }
+}
+
+
+/* --- 4. MODAL STILLARI (O'ZGARMAS) --- */
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; z-index: 9999;
 }
-
 .modal-panel-content {
-  width: 480px;
-  background: rgba(131, 18, 18, 0.98);
-  border-radius: 12px;
-  padding: 40px 30px;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 480px; background: rgba(131, 18, 18, 0.98); border-radius: 12px; padding: 40px 30px; position: relative; border: 1px solid rgba(255, 255, 255, 0.15);
 }
-
+@media (max-width: 576px) {
+  .modal-panel-content { width: 90%; padding: 30px 20px; }
+  .form-row { flex-direction: column; gap: 22px; }
+}
 .panel-close-btn {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  opacity: 0.5;
+  position: absolute; top: 12px; right: 15px; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; opacity: 0.5;
 }
-
-/* SELECT PITICHKASI */
-.select-wrapper {
-  flex: 1;
-  position: relative;
-}
-
+.select-wrapper { position: relative; flex: 1; }
 .select-wrapper::after {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #ffffff;
-  pointer-events: none;
-  opacity: 0.8;
+  content: ""; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid #ffffff; pointer-events: none; opacity: 0.8;
 }
-
-.order-form select {
-  width: 100%;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding-right: 28px !important;
-}
-
-/* Umumiy form elementlari */
+.order-form select { width: 100%; appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 28px !important; }
 .order-form { display: flex; flex-direction: column; gap: 22px; }
 .form-row { display: flex; gap: 15px; }
 .order-form input, .order-form select, .order-form textarea {
-  flex: 1; background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 8px 5px; color: #fff; font-family: 'Segoe UI', sans-serif; font-size: 14px; outline: none;
+  flex: 1; background: transparent; border: none; border-bottom: 1px solid rgba(255, 255, 255, 0.4); padding: 8px 5px; color: #fff; font-family: 'Segoe UI', sans-serif; font-size: 14px; outline: none;
 }
 .order-form input::placeholder, .order-form textarea::placeholder { color: rgba(255, 255, 255, 0.5); }
 .order-form input:focus, .order-form select:focus, .order-form textarea:focus { border-bottom-color: var(--accent-gold); }
 .order-form select option { background: #721010; color: #fff; }
-
-.form-submit-btn {
-  background: #E08722; color: white; border: none; padding: 14px; font-size: 15px;
-  font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px;
-}
-
-/* --- RESPONSIVE MEDIA --- */
-@media (max-width: 992px) {
-  .hero-content-row {
-    margin-top: 100px;
-    margin-bottom: 40px;
-  }
-}
+.form-submit-btn { background: #E08722; color: white; border: none; padding: 14px; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; }
