@@ -3,5 +3,23 @@
     "home": "Home",
     "about": "About us",
     "header-btn": "Contact"
+  },
+  "hero": {
+    "marquee_text": "TRUST! NATURAL PRODUCTS QUALITY AND ",
+    "description": "AQVO is the first brand in Uzbekistan to embody quality and honesty, presenting jiz products with a new taste and modern design.",
+    "order_btn": "ORDER",
+    "form": {
+      "title": "Order",
+      "name": "First Name",
+      "surname": "Last Name",
+      "phone": "Phone Number",
+      "telegram": "Telegram username",
+      "region": "Region",
+      "service": "Select service type",
+      "option_product": "Product",
+      "option_franchise": "Franchise",
+      "message": "Message",
+      "submit": "Submit"
+    }
   }
 }
