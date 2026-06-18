@@ -16,6 +16,7 @@
     "i18next-http-backend": "^4.0.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-fast-marquee": "^1.6.5",
     "react-i18next": "^17.0.8",
     "react-router-dom": "^7.18.0",
     "swiper": "^12.2.0"
