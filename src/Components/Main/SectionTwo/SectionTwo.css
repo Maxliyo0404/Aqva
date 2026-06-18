@@ -1,80 +1,51 @@
+
 .sectionTwo { padding: 40px 0; background: transparent; }
 
-/* Sarlavhani konteyner bilan moslash */
 .sectionTwo-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    margin-bottom: 30px; 
-    padding: 0 20px; /* Rasmlar qatori bilan tekis bo'lishi uchun */
+    display: flex; justify-content: space-between; align-items: center; 
+    margin-bottom: 30px; padding: 0 20px; 
 }
-
-.header-left { display: flex; align-items: center; gap: 20px;position: relative; }
+.header-left { display: flex; align-items: center; gap: 20px; position: relative; }
 
 .sectionTwo-title { 
-    max-width: 371px;
-    font-size: 30px; 
-    color: var(--color-white-solid, #FFFFFF);
-
-    text-transform: uppercase; 
-    margin: 0; 
-    font-weight: 700; 
-    letter-spacing: 0.5px;
+    max-width: 371px; font-size: 30px; color: #FFFFFF; 
+    text-transform: uppercase; margin: 0; font-weight: 700; 
 }
-
-.sectionTwo-logo { width: 50%; position: absolute; left: 100%; bottom: -20%;}
+.sectionTwo-logo { width: 50%; position: absolute; left: 105%; bottom: -10px; }
 
 .social-links { display: flex; gap: 8px; flex-direction: column; }
 .social-links a { 
-    color: #ffffff; 
-   border: 1px solid #FFFFFF;
-    padding: 11px 40px; 
-    border-radius: 25px; 
-    text-decoration: none; 
-    font-size: 14px; 
-    font-weight: 500;
-    transition: all 0.3s ease;
+    color: #ffffff; border: 1px solid #FFFFFF; padding: 11px 40px; 
+    border-radius: 25px; text-decoration: none; font-size: 14px; 
 }
-
-.social-links a:hover { 
-    background: #ffffff; 
-    color: #8B0000; /* Qizil rangli fon uchun qizil matn */
-}
-
-/* Rasmlar qatori */
-.marquee-wrapper { margin-bottom: 30px; }
+.marquee-wrapper { margin-top: 45px; margin-bottom: 30px !important; } 
 .marquee-wrapper-bottom { margin-top: 0; }
-
-.img-large, .img-small { 
-    margin: 0 !important; 
-    padding: 0 5px; 
-    flex-shrink: 0; 
-}
 
 .img-large img { width: 250px; height: 250px; object-fit: cover; border-radius: 20px; }
 .img-small img { width: 180px; height: 180px; object-fit: cover; border-radius: 20px; }
+.img-large, .img-small { margin: 0 !important; padding: 0 5px; flex-shrink: 0; }
 
-media (max-width: 768px) {
+
+@media (max-width: 768px) {
     .sectionTwo-header { flex-direction: column; gap: 20px; text-align: center; }
-    .header-left { flex-direction: column; gap: 10px; }
+    .header-left { flex-direction: column; position: static; }
+    .sectionTwo-logo { position: static; width: 100px; margin-top: 10px; }
+    .social-links { flex-direction: row; }
+    .marquee-wrapper {  margin-top: 25px; margin-bottom: 20px !important; } /* Mobil uchun moslashdi */
+}
+
+/* 2. Telefonlar (576px dan kichik) */
+@media (max-width: 576px) {
     .sectionTwo-title { font-size: 24px; }
     .img-large img { width: 180px; height: 180px; }
     .img-small img { width: 130px; height: 130px; }
+    .marquee-wrapper { margin-bottom: 15px !important; } 
 }
 
-/* O'RTACHA TELEFONLAR uchun (480px dan past) */
-@media (max-width: 480px) {
+/* 3. Juda kichik telefonlar (400px dan kichik) */
+@media (max-width: 400px) {
     .sectionTwo-title { font-size: 20px; }
-    .social-links { gap: 5px; }
-    .social-links a { padding: 8px 25px; font-size: 12px; }
-    .img-large img { width: 140px; height: 140px; }
-    .img-small img { width: 100px; height: 100px; }
-}
-
-/* JUDA KICHIK TELEFONLAR uchun (375px dan past) */
-@media (max-width: 375px) {
-    .sectionTwo-title { font-size: 18px; line-height: 1.2; }
-    .social-links a { padding: 6px 15px; font-size: 11px; }
-    .img-large img { width: 120px; height: 120px; }
-    .img-small img { width: 90px; height: 90px; }
+    .img-large img { width: 100px; height: 100px; }
+    .img-small img { width: 80px; height: 80px; }
+    .marquee-wrapper { margin-top: 15px; margin-bottom: 10px !important; }
 }
