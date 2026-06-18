@@ -75,12 +75,11 @@
 }
 
 .select {
-   
     cursor: pointer;
     outline: none;
     color: #FFFFFF;
-    font-size: 23px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     background: none;
     border: none;
 }
@@ -105,6 +104,7 @@
 
 .header-btn:hover {
     background: #ffffff;
+    color:  #bf9b6f;
     transform: translateY(-1px);
 }
 .mobile-only {
