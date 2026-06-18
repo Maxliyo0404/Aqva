@@ -1,0 +1,110 @@
+
+.sectionOne {
+  width: 100%;
+  position: relative;
+}
+
+.sectionOneSwiper {
+  width: 100%;
+  height: 600px;
+}
+
+.sectionOne-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionOne-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.sectionOne-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.sectionOne-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 760px;
+}
+
+.sectionOne-title {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 76px;
+}
+
+.sectionOne-desc {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.sectionOne-pagination {
+  position: absolute;
+  bottom: 30px !important;
+  left: 50% !important;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: auto !important;
+}
+
+.sectionOne-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #ffffff !important;
+  opacity: 0.4;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sectionOne-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #E5C396 !important;
+  transform: scale(1.2);
+}
+@media (max-width: 760px) {
+  .sectionOneSwiper { height: 550px; }
+  .sectionOne-title { font-size: 64px; }
+  .sectionOne-desc { font-size: 16px; }
+}
+@media (max-width: 576px) {
+  .sectionOneSwiper { height: 500px; }
+  .sectionOne-title { font-size: 44px; }
+  .sectionOne-desc { font-size: 15px; }
+}
+@media (max-width: 480px) {
+  .sectionOneSwiper { height: 400px; }
+  .sectionOne-title { font-size: 32px; }
+  .sectionOne-desc { font-size: 13px; }
+  .sectionOne-pagination { bottom: 20px !important; }
+}
