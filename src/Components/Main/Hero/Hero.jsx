@@ -37,43 +37,30 @@ function Hero() {
 
   return (
     <div className="hero">
-      
-      {/* 1. Katta aylanuvchi matn (Marquee) */}
       <div className="marquee-container">
         <div className="marquee-content">
           <span>{t('hero.marquee_text') || "TABIIY MAHSULOTLAR"}</span>
           <span>{t('hero.marquee_text') || "TABIIY MAHSULOTLAR"}</span>
         </div>
       </div>
-
-      {/* 2. Asosiy boshqaruvchi container */}
       <div className="container">
         <div className="hero-content-row">
           
-          {/* Chap tarafdagi matn */}
           <div className="text-content">
             <p>{t('hero.description') || "AQVO – O‘zbekistonda birinchi bo‘lib sifat va halollikni o‘zida mujassam etgan..."}</p>
           </div>
-
-          {/* O'ng tarafdagi dinamik tugma (Hover bo'lganda yozuv chiqadi) */}
           <div className="circle-toggle" onClick={() => setIsPanelOpen(true)}>
             <div className="circle-background">
-              {/* Standart holatda turadigan shoh logotipi */}
               <img src={hero1} alt="AQVO Horn" className="horn-icon-img" />
-              {/* Mishka borganda chiqadigan matn */}
               <span className="hover-text-order">BUYURTMA</span>
             </div>
           </div>
 
         </div>
       </div>
-
-      {/* 3. Eng pastdagi to'liq banner */}
       <div className="banner-bottom-full">
         <img src={hero2} alt="AQVO Products" className="products-banner-full" />
       </div>
-
-      {/* 4. Modal panel */}
       {isPanelOpen && (
         <div className="modal-overlay" onClick={() => setIsPanelOpen(false)}>
           <div className="modal-panel-content" onClick={(e) => e.stopPropagation()}>

@@ -7,17 +7,14 @@
 .hero {
   position: relative;
   width: 100%;
-  /* Ortiqcha cho'zilishni batamom yo'qotamiz */
   height: auto;
   min-height: auto; 
   background-color: var(--bg-dark-red);
-  display: block; /* Flex-dan oddiy block-ga o'tkazildi, shunda pastga majburlab qisish bo'lmaydi */
+  display: block; 
   box-sizing: border-box;
   padding-top: 80px; 
   overflow: hidden;
 }
-
-/* --- 1. MARQUEE SLIDER --- */
 .marquee-container {
   display: flex;
   overflow: hidden;
@@ -46,8 +43,6 @@
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
-
-/* --- 2. ASOSIY ROW BLOK --- */
 .hero .container {
   max-width: 1200px;
   width: 100%;
@@ -61,8 +56,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  
-  /* Katta monitorlar uchun standart Figma masofalari */
   margin-top: 100px;   
   margin-bottom: 60px;  
   transition: all 0.3s ease;
@@ -79,8 +72,6 @@
   line-height: 1.6;
   margin: 0;
 }
-
-/* --- DINAMIK SHOH TUGMASI --- */
 .circle-toggle {
   width: 110px;
   height: 110px;
@@ -134,12 +125,10 @@
 
 .circle-toggle:hover .horn-icon-img { opacity: 0; transform: scale(0.5); }
 .circle-toggle:hover .hover-text-order { opacity: 1; transform: scale(1); }
-
-/* --- 3. ENG PASTIDAGI BANNER --- */
 .banner-bottom-full {
   width: 100%;
   line-height: 0;
-  margin-top: 0; /* Ortiqcha avtomatik pastga surish o'chirildi */
+  margin-top: 0;
 }
 
 .products-banner-full {
@@ -149,17 +138,12 @@
 }
 
 
-/* ==========================================================================
-   RESPONSIVE: EKAN 1030PX DAN KICHRAYGANDA (PLANSHET VA MOBIL)
-   ========================================================================== */
-
 @media (max-width: 1030px) {
   .hero { 
     padding-top: 70px; 
   }
   
   .hero-content-row {
-    /* Siz aytgandek: tepasi ham qat'iy 30px, pastki rasm bilan orasi ham qat'iy 30px! */
     margin-top: 30px !important; 
     margin-bottom: 30px !important;
   }
@@ -173,8 +157,6 @@
     width: 45px; 
   }
 }
-
-/* --- KICHIK PLANSHETLAR (768px gacha) --- */
 @media (max-width: 768px) {
   .hero-content-row {
     margin-top: 30px !important; 
@@ -188,8 +170,6 @@
   .horn-icon-img { width: 40px; }
   .hover-text-order { font-size: 10px; }
 }
-
-/* --- MOBIL APPARATLAR (480px gacha — image_0ba90c.jpg skrinshotingiz holati) --- */
 @media (max-width: 480px) {
   .hero { 
     padding-top: 50px; 
@@ -199,8 +179,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-    /* Ikkala tomonlama 30px masofa qat'iy mixlandi, endi ekran uzun bo'lsa ham cho'zilmaydi! */
     margin-top: 30px !important; 
     margin-bottom: 30px !important;
     gap: 20px;
@@ -225,8 +203,6 @@
   }
 }
 
-
-/* --- 4. MODAL STILLARI (O'ZGARMAS) --- */
 .modal-overlay {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
   background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; z-index: 9999;
