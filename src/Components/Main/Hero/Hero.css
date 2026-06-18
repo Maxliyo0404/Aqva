@@ -13,11 +13,9 @@
   display: block; 
   box-sizing: border-box;
   padding-top: 80px; 
-  overflow: hidden;
 }
 .marquee-container {
   display: flex;
-  overflow: hidden;
   width: 100%;
   user-select: none;
   margin-top: 10px;
@@ -94,7 +92,6 @@
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
 }
 
 .horn-icon-img {
