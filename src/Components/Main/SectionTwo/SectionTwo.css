@@ -31,18 +31,14 @@
     .header-left { flex-direction: column; position: static; }
     .sectionTwo-logo { position: static; width: 100px; margin-top: 10px; }
     .social-links { flex-direction: row; }
-    .marquee-wrapper {  margin-top: 25px; margin-bottom: 20px !important; } /* Mobil uchun moslashdi */
+    .marquee-wrapper {  margin-top: 25px; margin-bottom: 20px !important; }
 }
-
-/* 2. Telefonlar (576px dan kichik) */
 @media (max-width: 576px) {
     .sectionTwo-title { font-size: 24px; }
     .img-large img { width: 180px; height: 180px; }
     .img-small img { width: 130px; height: 130px; }
     .marquee-wrapper { margin-bottom: 15px !important; } 
 }
-
-/* 3. Juda kichik telefonlar (400px dan kichik) */
 @media (max-width: 400px) {
     .sectionTwo-title { font-size: 20px; }
     .img-large img { width: 100px; height: 100px; }
