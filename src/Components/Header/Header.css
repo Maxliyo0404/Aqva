@@ -4,8 +4,6 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-      background-color: var(--main-color);
-    backdrop-filter: blur(10px);
     padding: 15px 0;
 }
 
@@ -122,29 +120,6 @@
     .header-container {
         padding: 0 20px;
         border-radius: 20px;
-    }
-    .header-nav {
-        position: fixed;
-        top: 20px;
-        right: -100%; /* Menyuni dastlab yashirish uchun */
-        width: 350px; 
-        max-width: calc(100vw - 40px); /* Ekranga sig'ishini ta'minlash */
-        height: calc(100vh - 40px);
-        background: #F2F2F2; 
-        border-radius: 20px;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 30px 20px;
-        box-sizing: border-box;
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1010;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
-        gap: 30px;
-    }
-
-    .header-nav.active {
-        right: 20px; /* Menyuni ochish */
     }
     .header-nav, .desktop-only {
         flex: unset;
