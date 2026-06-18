@@ -19,6 +19,9 @@
   width: 100%;
   user-select: none;
   margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .marquee-content {
