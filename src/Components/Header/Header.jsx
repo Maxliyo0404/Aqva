@@ -19,11 +19,8 @@ function Header() {
         <div className="header">
             <div className="container">
                 <div className="header-container">
-
-                    {/* Mobil va Desktop Navigatsiya paneli */}
                     <nav className={`header-nav ${isMenuOpen ? "active" : ""}`}>
                         
-                        {/* Mobil menyu ichidagi maxsus tepa qism (Logo va Krestik) */}
                         <div className="mobile-menu-header">
                             <img src={logo} alt="AQVO Logo" className="mobile-menu-logo" />
                             <div className="close-menu-btn" onClick={toggleMenu}>
@@ -31,7 +28,6 @@ function Header() {
                             </div>
                         </div>
 
-                        {/* Navigatsiya havolalari */}
                         <ul className="header-list">
                             <li>
                                 <a className="header-link" href="#home" onClick={() => setIsMenuOpen(false)}>
@@ -44,8 +40,6 @@ function Header() {
                                 </a>
                             </li>
                         </ul>
-                    
-                        {/* Figma chizmasidagi mobil til va tugma bloki */}
                         <div className="header-lengu mobile-only">
                             <div className="mobile-lang-selector">
                                 <button 
@@ -69,15 +63,11 @@ function Header() {
                             </div>
                         </div>
                     </nav>
-
-                    {/* Markazdagi asosiy logo */}
                     <div className="header-logo-box">
                         <a className="logo" href="#">
                             <img src={logo} alt="AQVO Logo" />
                         </a>
                     </div>
-
-                    {/* Faqat Desktop uchun til va bog'lanish tugmasi */}
                     <div className="header-lengu desktop-only">
                         <select className="select" onChange={(e) => handleLanguageChange(e.target.value)} value={i18n.language}>
                             <option value="uz">UZB</option>
@@ -86,8 +76,6 @@ function Header() {
                         </select>
                         <button type="button" className="header-btn">{t("header.header-btn")}</button>
                     </div>
-
-                    {/* Burger chiziqchalari (Faqat mobil ekranda ko'rinadi) */}
                     <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
                         <span></span>
                         <span></span>
@@ -96,8 +84,7 @@ function Header() {
 
                 </div>
             </div>
-            
-            {/* Orqa fonni xiralashtiruvchi qatlam (Ochilganda fon bosilsa yopiladi) */}
+
             {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
         </div>
     );

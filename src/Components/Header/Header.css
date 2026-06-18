@@ -116,9 +116,7 @@
 .burger-menu { display: none; }
 .mobile-menu-header { display: none; }
 
-/* ==========================================================================
-   RESPONSIVE MOD: FIGMA 1-BIE-1 MOBIL MENYU VARIANTI (max-width: 992px)
-   ========================================================================== */
+
 @media (max-width: 992px) {
     .header-container {
         padding: 0 20px;
@@ -132,8 +130,6 @@
     .desktop-only {
         display: none;
     }
-
-    /* O'ng tarafdagi 3ta chiziq (Burger) */
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -149,15 +145,13 @@
         transition: 0.3s ease;
         border-radius: 2px;
     }
-
-    /* FIGMA CHIZMASIDAGI OQ MODAL MENYU BOX */
     .header-nav {
         position: fixed;
         top: 20px;
-        right: -380px; /* Ekrandan tashqarida turadi */
-        width: 350px;  /* Figma: Max-width 350px */
+        right: -380px; 
+        width: 350px; 
         height: calc(100vh - 40px);
-        background: #F2F2F2; /* Figma chizmasidagi och kulrang/oq fon */
+        background: #F2F2F2; 
         border-radius: 20px;
         flex-direction: column;
         justify-content: flex-start;
@@ -171,10 +165,9 @@
     }
 
     .header-nav.active {
-        right: 20px; /* Figma chizmasidek chekkadan chiroyli joylashadi */
+        right: 20px; 
     }
 
-    /* Mobil Menyuning Tepasi (Logo va Krestik) */
     .mobile-menu-header {
         display: flex;
         width: 100%;
@@ -186,7 +179,7 @@
     .mobile-menu-logo {
         height: 35px;
         object-fit: contain;
-        filter: invert(1) brightness(0.4); /* Oq logoni to'q rangli qilish */
+        filter: invert(1) brightness(0.4); 
     }
 
     .close-menu-btn {
@@ -196,8 +189,6 @@
         line-height: 1;
         font-weight: 300;
     }
-
-    /* Mobil Menyudagi havolalar */
     .header-list {
         flex-direction: column;
         align-items: center;
@@ -207,7 +198,7 @@
 
     .header-link {
         font-size: 18px;
-        color: #8E1717; /* Figma bo'yicha to'q qizil yozuvlar */
+        color: #8E1717; 
         font-weight: 600;
     }
 
@@ -215,10 +206,8 @@
         display: flex;
         width: 100%;
         justify-content: center;
-        margin-top: auto; /* Pastki qismga itaradi */
+        margin-top: auto; 
     }
-
-    /* FIGMA: Dumaloq qizil hoshiyali til tugmalari */
     .mobile-lang-selector {
         display: flex;
         gap: 10px;
@@ -242,8 +231,6 @@
         background: #8E1717;
         color: #FFFFFF;
     }
-
-    /* Orqa fon qorong'uligi */
     .menu-overlay {
         position: fixed;
         top: 0;
@@ -258,6 +245,6 @@
 
 @media (max-width: 420px) {
     .header-nav {
-        width: calc(100vw - 40px); /* Kichik telefonlarda chetiga taqalmaydi */
+        width: calc(100vw - 40px);
     }
 }
