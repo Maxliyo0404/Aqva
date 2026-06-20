@@ -17,7 +17,9 @@ function SectionThree() {
         
             </div>
             <div className="three-right">
-                
+                <form className="trhee-form">
+                    <label htmlFor=""></label>
+                </form>
             </div>
             </div>
         </div>
