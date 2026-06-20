@@ -34,6 +34,9 @@ function SectionThree() {
                     <label htmlFor="number">{t(SectionThree.label3)}</label>
                     <input type="number" required placeholder="{t(SectionThree.input5)}" />
                    </div>
+                   <select>
+                        <option>{t("sectionThree.service_type")}</option>
+                    </select>
                 </form>
             </div>
             </div>
