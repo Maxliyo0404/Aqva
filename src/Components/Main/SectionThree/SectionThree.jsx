@@ -23,7 +23,7 @@ function SectionThree() {
                     <input type="text" required placeholder="{t(SectionThree.input1)}" />
                    </div>
                     <div className="input-group">
-                    <label htmlFor="text">{t(SectionThree.label1)}</label>
+                    <label htmlFor="text">{t(SectionThree.label2)}</label>
                     <input type="text" required placeholder="{t(SectionThree.input1)}" />
                    </div>
                     <div className="input-group">
