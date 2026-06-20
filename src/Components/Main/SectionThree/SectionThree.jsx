@@ -27,8 +27,8 @@ function SectionThree() {
                     <div className="input-group">
                     <label htmlFor="number">{t(SectionThree.label3)}</label>
                     <input type="number" required placeholder="{t(SectionThree.input3)}" />
-                   </div>
-                    <div className="input-group">
+             
+                   
                     <label htmlFor="">{t(SectionThree.label1)}</label>
                     <input type="text" required placeholder="{t(SectionThree.input1)}" />
                    </div>
