@@ -10,10 +10,14 @@ function SectionThree() {
             <div className="sectionThree-werapper">
                 <div className="three-left">
                     <h2 className="sectionThree-title">{t("sectionThree.three-title")}</h2>
-                    <p className="sectionThree-text">{t("sectionThree.three-text")}</p>
-                    <p className="sectionThree-text">{t("sectionThree.three-text")}</p>
-                    <p className="sectionThree-text">{t("sectionThree.three-text")}</p>
+                    <p className="sectionThree-text1">{t("sectionThree.three-text1")}</p>
+                    <p className="sectionThree-text2">{t("sectionThree.three-text2")}</p>
+                    <p className="sectionThree-text3">{t("sectionThree.three-text3")}</p>
+                    <p className="sectionThree-text4">{t("sectionThree.three-text4")}</p>
         
+            </div>
+            <div className="three-right">
+                
             </div>
             </div>
         </div>
