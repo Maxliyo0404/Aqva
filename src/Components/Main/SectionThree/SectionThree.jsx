@@ -18,7 +18,8 @@ function SectionThree() {
             </div>
             <div className="three-right">
                 <form className="trhee-form">
-                    <label htmlFor=""></label>
+                    <label htmlFor="name">{t(SectionThree.label1)}</label>
+                    <input type="text" />
                 </form>
             </div>
             </div>
