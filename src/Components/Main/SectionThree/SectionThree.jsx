@@ -37,6 +37,8 @@ function SectionThree() {
                    <select>
                         <option>{t("sectionThree.service_type")}</option>
                     </select>
+                    <textarea placeholder={t("sectionThree.message")}></textarea>
+                     <button type="submit">{t("sectionThree.submit")}</button>
                 </form>
             </div>
             </div>
