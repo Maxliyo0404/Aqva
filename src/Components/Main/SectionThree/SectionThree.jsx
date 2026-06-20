@@ -29,7 +29,7 @@ function SectionThree() {
                     <input type="number" required placeholder="{t(SectionThree.input3)}" />
              
                    
-                    <label htmlFor="">{t(SectionThree.label1)}</label>
+                    <label htmlFor="text">{t(SectionThree.label1)}</label>
                     <input type="text" required placeholder="{t(SectionThree.input1)}" />
                    </div>
                 </form>
