@@ -18,9 +18,22 @@ function SectionThree() {
             </div>
             <div className="three-right">
                 <form className="trhee-form">
-                    <div className="input-group"></div>
+                    <div className="input-group">
                     <label htmlFor="text">{t(SectionThree.label1)}</label>
                     <input type="text" required placeholder="{t(SectionThree.input1)}" />
+                   </div>
+                    <div className="input-group">
+                    <label htmlFor="text">{t(SectionThree.label1)}</label>
+                    <input type="text" required placeholder="{t(SectionThree.input1)}" />
+                   </div>
+                    <div className="input-group">
+                    <label htmlFor="text">{t(SectionThree.label1)}</label>
+                    <input type="text" required placeholder="{t(SectionThree.input1)}" />
+                   </div>
+                    <div className="input-group">
+                    <label htmlFor="text">{t(SectionThree.label1)}</label>
+                    <input type="text" required placeholder="{t(SectionThree.input1)}" />
+                   </div>
                 </form>
             </div>
             </div>
