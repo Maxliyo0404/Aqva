@@ -18,6 +18,7 @@ function SectionThree() {
             </div>
             <div className="three-right">
                 <form className="trhee-form">
+                    <div className="input-group"></div>
                     <label htmlFor="text">{t(SectionThree.label1)}</label>
                     <input type="text" required placeholder="{t(SectionThree.input1)}" />
                 </form>
