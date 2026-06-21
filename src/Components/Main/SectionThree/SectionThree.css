@@ -1,0 +1,31 @@
+.sectionThree {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./image/three.jpg');
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+}
+.container { display: flex; max-width: 1200px; margin: auto; gap: 40px; }
+.three-left, .three-right { flex: 1; }
+
+/* Inputlar joylashuvi */
+.form-row { display: flex; gap: 20px; }
+input, select, textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff66;
+  color: white;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+textarea { border: 1px solid #ffffff66; height: 100px; padding: 10px; }
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #ff9f1a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
