@@ -1,11 +1,11 @@
 
 .sectionTwo { padding: 40px 0; background: transparent; }
 
-.sectionTwo-header { 
+.sectionTwo-container { 
     display: flex; justify-content: space-between; align-items: center; 
     margin-bottom: 30px; padding: 0 20px; 
 }
-.header-left { display: flex; align-items: center; gap: 20px; position: relative; }
+.sectionTwo-left { display: flex; align-items: center; gap: 20px; position: relative; }
 
 .sectionTwo-title { 
     max-width: 371px; font-size: 30px; color: #FFFFFF; 
@@ -27,8 +27,8 @@
 
 
 @media (max-width: 768px) {
-    .sectionTwo-header { flex-direction: column; gap: 20px; text-align: center; }
-    .header-left { flex-direction: column; position: static; }
+    .sectionTwo-container { flex-direction: column; gap: 20px; text-align: center; }
+    .sectionTwo-left { flex-direction: column; position: static; }
     .sectionTwo-logo { position: static; width: 100px; margin-top: 10px; }
     .social-links { flex-direction: row; }
     .marquee-wrapper {  margin-top: 25px; margin-bottom: 20px !important; }

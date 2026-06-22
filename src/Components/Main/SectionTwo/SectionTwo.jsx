@@ -25,8 +25,8 @@ function SectionTwo() {
     return (
         <div className="sectionTwo">
             <div className="container">
-                <div className="sectionTwo-header">
-                    <div className="header-left">
+                <div className="sectionTwo-container">
+                    <div className="sectionTwo-left">
                         <h2 className="sectionTwo-title">{t("sectionTwo.title", "SIZNING AQVO BILAN LAHZALARINGIZ")}</h2>
                         <img src={aqvo} alt="Aqvo" className="sectionTwo-logo" />
                     </div>
