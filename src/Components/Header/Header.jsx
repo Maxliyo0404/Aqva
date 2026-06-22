@@ -10,8 +10,7 @@ function Header() {
    const toggleMenu = () => {
         const newState = !isMenuOpen;
         setIsMenuOpen(newState);
-        
-        // Body ga klass qo'shish yoki olib tashlash
+    
         if (newState) {
             document.body.classList.add("menu-open");
         } else {

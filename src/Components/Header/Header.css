@@ -9,7 +9,7 @@ body.menu-open {
     width: 100%;
     z-index: 1000;
     padding: 15px 0;
-    background-color: transparent; /* Yoki o'zingizga kerakli rang */
+    background-color: transparent;
 }
 
 .header-container {
@@ -21,7 +21,6 @@ body.menu-open {
     border-radius: 30px;
     position: relative;
     padding: 0 30px;
-    box-sizing: border-box;
 }
 
 .header-nav, 
@@ -33,6 +32,7 @@ body.menu-open {
 .header-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     justify-content: flex-start;
 }
 
