@@ -15,7 +15,6 @@ function SectionThree() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Telegram API orqali jo'natish qismi
     alert("Ma'lumot yuborildi!");
   };
 

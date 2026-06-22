@@ -1,5 +1,5 @@
 .sectionThree {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./image/three.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(91, 86, 86, 0.7)), url('../SectionThree/image/three.jpg');
   background-size: cover;
   padding: 60px 20px;
   color: white;
