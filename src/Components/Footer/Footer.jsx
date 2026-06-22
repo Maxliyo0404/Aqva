@@ -1,1 +1,1 @@
-import
+import "./Footer.css"
