@@ -5,7 +5,7 @@ import React from 'react'
 function Footer() {
     const {t, i18n} = useTranslation();
   return (
-    <div>Footer</div>
+    <div></div>
   )
 }
 
