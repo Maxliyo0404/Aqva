@@ -62,12 +62,12 @@ button {
 
 @media (max-width: 802px) {
   .sectionThree .container {
-    flex-direction: column; /* Elementlarni birining ustiga birini qo'yish */
+    flex-direction: column;
     gap: 30px;
   }
 
   .three-left, .three-right {
-    max-width: 100%; /* To'liq kenglikka o'tkazish */
+    max-width: 100%;
   }
   
   .three-title {
@@ -76,19 +76,24 @@ button {
   }
 }
 
-/* Kichik telefonlar (576px gacha) */
+
 @media (max-width: 576px) {
   .sectionThree {
     padding: 40px 15px;
   }
-
+ input, select, textarea {
+  padding: 6px 0;
+  margin-bottom: 10px;
+ }
   .three-title {
     font-size: 24px;
     line-height: 30px;
   }
-
+  .three-text{
+    max-width: ;
+  }
   .form-row {
-    flex-direction: column; /* Formadagi inputlarni ustma-ust qilish */
+    flex-direction: column;
     gap: 0;
   }
 
