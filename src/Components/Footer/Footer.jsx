@@ -6,7 +6,11 @@ function Footer() {
     const {t, i18n} = useTranslation();
   return (
     <div className="footer">
-        <div className="container"></div>
+        <div className="container">
+            <div className="footer-container">
+                
+            </div>
+        </div>
     </div>
   )
 }
