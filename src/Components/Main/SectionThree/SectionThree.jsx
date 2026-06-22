@@ -45,8 +45,8 @@ function SectionThree() {
             
             <select name="service" onChange={handleChange}>
               <option>{t("sectionThree.service")}</option>
-              <option>{t("sectionThree.service")}</option>
-              <option>{t("sectionThree.service")}</option>
+              <option value="delivery">{t("sectionThree.delivery")}</option>
+              <option value="cooperation">{t("sectionThree.cooperation")}</option>
             </select>
             
             <textarea name="message" placeholder={t("sectionThree.message")} onChange={handleChange}></textarea>

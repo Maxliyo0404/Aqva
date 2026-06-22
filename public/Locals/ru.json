@@ -34,5 +34,17 @@
     "title": "ВАШИ МОМЕНТЫ С AQVO",
     "instagram": "Наш Instagram",
     "telegram": "Наш Telegram"
+  },
+  "sectionThree": {
+    "three-title": "Связаться с AQVO",
+    "three-text": "Свяжитесь с нами для получения дополнительной информации о продукции AQVO или для сотрудничества.",
+    "input1": "Ваше имя",
+    "input2": "Ваша фамилия",
+    "input3": "Ваш номер телефона",
+    "input4": "Ваш Telegram",
+    "input5": "Ваш регион",
+    "service": "Выберите услугу",
+    "message": "Текст сообщения",
+    "submit": "Отправить"
   }
 }
