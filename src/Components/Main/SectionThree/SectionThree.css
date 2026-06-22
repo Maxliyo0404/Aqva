@@ -59,3 +59,40 @@ button {
   color: #FFFFFF;
   
 }
+/* Planshet va katta telefonlar (992px gacha) */
+@media (max-width: 992px) {
+  .sectionThree .container {
+    flex-direction: column; /* Elementlarni birining ustiga birini qo'yish */
+    gap: 30px;
+  }
+
+  .three-left, .three-right {
+    max-width: 100%; /* To'liq kenglikka o'tkazish */
+  }
+  
+  .three-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* Kichik telefonlar (576px gacha) */
+@media (max-width: 576px) {
+  .sectionThree {
+    padding: 40px 15px;
+  }
+
+  .three-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Formadagi inputlarni ustma-ust qilish */
+    gap: 0;
+  }
+
+  button {
+    padding: 12px;
+  }
+}
