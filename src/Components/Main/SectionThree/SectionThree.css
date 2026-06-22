@@ -79,7 +79,7 @@ button {
 
 @media (max-width: 576px) {
   .sectionThree {
-    padding: 40px 15px;
+    padding: 30px 15px;
   }
  input, select, textarea {
   padding: 6px 0;
