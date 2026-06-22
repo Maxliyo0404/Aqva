@@ -44,6 +44,8 @@
     "input4": "Your Telegram",
     "input5": "Your Region",
     "service": "Select a service",
+    "delivery": "Delivery",
+    "cooperation": "Cooperation",
     "message": "Message",
     "submit": "Submit"
   }
