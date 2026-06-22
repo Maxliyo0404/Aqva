@@ -43,11 +43,11 @@ button {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-.three-title{
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 48px;
-  margin-bottom: 10px;
+.three-text{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 11px;
   color: #FFFFFF;
-  text-transform: uppercase;
+  
 }
