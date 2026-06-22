@@ -22,8 +22,6 @@ body.menu-open {
     position: relative;
     padding: 0 30px;
 }
-
-.header-nav, 
 .header-logo-box, 
 .desktop-only {
     flex: 1; 
