@@ -22,8 +22,8 @@ function SectionThree() {
     <section className="sectionThree">
       <div className="container">
         <div className="three-left">
-          <h2>{t("sectionThree.three-title")}</h2>
-          <p>{t("sectionThree.three-text")}</p>
+          <h2 className="three-title">{t("sectionThree.three-title")}</h2>
+          <p className="three-text">{t("sectionThree.three-text")}</p>
           <div className="contact-info">
             <p>Bog'lanish uchun telefon raqamlarimiz:</p>
             <p>Tel: +998957724444</p>
