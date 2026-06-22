@@ -7,7 +7,6 @@
 .container { display: flex; max-width: 1200px; margin: auto; gap: 40px; }
 .three-left, .three-right { flex: 1; }
 
-/* Inputlar joylashuvi */
 .form-row { display: flex; gap: 20px; }
 input, select, textarea {
   width: 100%;
