@@ -44,6 +44,8 @@
     "input4": "Ваш Telegram",
     "input5": "Ваш регион",
     "service": "Выберите услугу",
+    "delivery": "Доставка",
+    "cooperation": "Сотрудничество",
     "message": "Текст сообщения",
     "submit": "Отправить"
   }
