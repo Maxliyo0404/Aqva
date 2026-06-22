@@ -36,5 +36,18 @@ button {
   max-width: 50%;
 }
 .three-title{
-
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.three-title{
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+  text-transform: uppercase;
 }
