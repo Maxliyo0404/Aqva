@@ -90,7 +90,9 @@ button {
     line-height: 30px;
   }
   .three-text{
-    max-width: ;
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 19px;
   }
   .form-row {
     flex-direction: column;
