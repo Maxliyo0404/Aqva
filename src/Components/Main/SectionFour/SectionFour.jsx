@@ -12,7 +12,7 @@ function SectionFour() {
     <div className="sectionFour">
       <div className="container">
         <div className="four-wrapper">
-        <h2></h2>
+        <h2 className="four-title">{t("sectionFour.four-title")}</h2>
         </div>
       </div>
     </div>
