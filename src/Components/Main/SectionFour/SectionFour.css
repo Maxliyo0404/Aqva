@@ -3,7 +3,7 @@
 }
 .four-container{
     display: flex;
-    
+    flex-direction: column;
 }
 .four-title {
     max-width: 327px;
