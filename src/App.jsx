@@ -5,7 +5,7 @@ import Hero from "./Components/Main/Hero/Hero";
 import SectionOne from "./Components/Main/SectionOne/SectionOne";
 import SectionTwo from "./Components/Main/SectionTwo/SectionTwo";
 import SectionThree from "./Components/Main/SectionThree/SectionThree";
-import SectionFour from "./Components/SectionFour/SectionFour";
+import SectionFour from "./Components/Main/SectionFour/SectionFour";
 import Footer from "./Components/Footer/Footer";
 function App() {
   return (
