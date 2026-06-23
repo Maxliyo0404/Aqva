@@ -3,7 +3,7 @@ import "./SectionFour.css";
 import React from 'react'
 
 function SectionFour() {
-  const {t, i18n} =useTranslation
+  const {t, i18n} =useTranslation();
   return (
     <div>SectionFour</div>
   )
