@@ -6,7 +6,9 @@ function SectionFour() {
   const {t, i18n} =useTranslation();
   return (
     <div className="sectionFour">
-      <div className="container"></div>
+      <div className="container">
+        <div className="four-wrapper"></div>
+      </div>
     </div>
   )
 }
