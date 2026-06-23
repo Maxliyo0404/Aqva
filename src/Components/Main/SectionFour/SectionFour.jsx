@@ -19,7 +19,6 @@ function SectionFour() {
   return (
     <div className="sectionFour">
       <div className="container">
-        <div className="four-container">
         <h2 className="four-title">{t("sectionFour.four-title")}</h2>
         
         <Swiper
@@ -39,7 +38,6 @@ function SectionFour() {
             </SwiperSlide>
           ))}
         </Swiper>
-        </div>
       </div>
     </div>
   );
