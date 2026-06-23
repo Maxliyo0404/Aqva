@@ -2,7 +2,7 @@ import "./SectionFour.css";
 import React from 'react'
 
 function SectionFour() {
-  const {t, i18n}
+  const {t, i18n} =
   return (
     <div>SectionFour</div>
   )
