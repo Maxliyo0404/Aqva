@@ -3,7 +3,7 @@ import "./SectionFour.css";
 import React from 'react'
 import four1 from "./image/four1.png";
 import four2 from "./image/four2.png";
-import four2 from "./image/four2.png";
+import four3 from "./image/four2.png";
 import four2 from "./image/four2.png";
 
 function SectionFour() {
