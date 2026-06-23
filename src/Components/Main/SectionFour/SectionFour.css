@@ -1,10 +1,6 @@
 .sectionFour {
   padding: 50px 0;
 }
-.four-container{
-    display: flex;
-    flex-direction: column;
-}
 .four-title {
     max-width: 327px;
   text-align: center;
