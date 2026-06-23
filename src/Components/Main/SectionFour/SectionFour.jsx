@@ -19,6 +19,7 @@ function SectionFour() {
   return (
     <div className="sectionFour">
       <div className="container">
+        < className="four-container">
         <h2 className="four-title">{t("sectionFour.four-title")}</h2>
         
         <Swiper
