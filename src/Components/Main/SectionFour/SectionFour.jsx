@@ -5,7 +5,7 @@ import React from 'react'
 function SectionFour() {
   const {t, i18n} =useTranslation();
   return (
-    <div></div>
+    <div className=""></div>
   )
 }
 
